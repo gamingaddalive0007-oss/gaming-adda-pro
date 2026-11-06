@@ -1,0 +1,47 @@
+name: Build GAMING ADDA APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Gaming Adda Pro.zip'
+      - '.github/workflows/build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '9.8.2'
+
+      - name: Extract project
+        run: |
+          mkdir source
+          unzip -q "Gaming Adda Pro.zip" -d source
+          PROJECT_DIR=$(find source -name settings.gradle.kts -printf '%h\n' | head -n 1)
+          echo "PROJECT_DIR=$PROJECT_DIR" >> $GITHUB_ENV
+
+      - name: Build APK
+        run: |
+          cd "$PROJECT_DIR"
+          gradle wrapper --gradle-version 9.8.2
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: GAMING-ADDA-APK
+          path: '**/build/outputs/apk/debug/*.apk'
