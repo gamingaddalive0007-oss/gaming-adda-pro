@@ -33,11 +33,6 @@ jobs:
           PROJECT_DIR=$(find source -name settings.gradle.kts -printf '%h\n' | head -n 1)
           echo "PROJECT_DIR=$PROJECT_DIR" >> $GITHUB_ENV
 
-      - name: Fix App Package
-        run: |
-          sed -i 's/com\.example/com.aistudio.gamingadda.esport/g' "$PROJECT_DIR/app/build.gradle.kts"
-          grep -nE 'namespace|applicationId' "$PROJECT_DIR/app/build.gradle.kts"
-
       - name: Copy Firebase config
         run: |
           cp google-services.json "$PROJECT_DIR/app/google-services.json"
