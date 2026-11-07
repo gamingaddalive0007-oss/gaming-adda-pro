@@ -33,6 +33,10 @@ jobs:
           PROJECT_DIR=$(find source -name settings.gradle.kts -printf '%h\n' | head -n 1)
           echo "PROJECT_DIR=$PROJECT_DIR" >> $GITHUB_ENV
 
+      - name: Copy Firebase config
+        run: |
+          cp "$PROJECT_DIR/google-services.json" "$PROJECT_DIR/app/google-services.json"
+          
       - name: Build APK
         run: |
           cd "$PROJECT_DIR"
