@@ -32,6 +32,11 @@ jobs:
           unzip -q "gaming-adda-pro.zip" -d source
           PROJECT_DIR=$(find source -name settings.gradle.kts -printf '%h\n' | head -n 1)
           echo "PROJECT_DIR=$PROJECT_DIR" >> $GITHUB_ENV
+          
+      - name: Fix Application ID
+        run: |
+          sed -i 's/applicationId = "com.example"/applicationId = "com.aistudio.gamingadda.esport"/' "$PROJECT_DIR/app/build.gradle.kts"
+          grep -nE 'namespace|applicationId' "$PROJECT_DIR/app/build.gradle.kts"
 
       - name: Copy Firebase config
         run: |
