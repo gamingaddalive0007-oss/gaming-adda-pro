@@ -35,7 +35,7 @@ jobs:
 
       - name: Copy Firebase config
         run: |
-          cp "$PROJECT_DIR/google-services.json" "$PROJECT_DIR/app/google-services.json"
+          cp google-services.json "$PROJECT_DIR/app/google-services.json"
           
       - name: Build APK
         run: |
