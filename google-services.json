@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "619097937581",
+    "project_id": "gaming-adda-2a5d8",
+    "storage_bucket": "gaming-adda-2a5d8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619097937581:android:ee5ddf3c6e36707be4d824",
+        "android_client_info": {
+          "package_name": "com.aistudio.gamingadda.esport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619097937581-vijam4be2fao5g9ovglhago9tjbjot4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aistudio.gamingadda.esport",
+            "certificate_hash": "de9ceea83e0f78dd10828fa04b192fd7d61007f6"
+          }
+        },
+        {
+          "client_id": "619097937581-ehtv4vkje2l3k3dt23030ntsk3btpqet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBULKxZ4Wji1fvM9oyIpYoZ8s1b7DreDNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619097937581-ehtv4vkje2l3k3dt23030ntsk3btpqet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619097937581:android:140768759679d0d2e4d824",
+        "android_client_info": {
+          "package_name": "com.gamingadda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619097937581-ehtv4vkje2l3k3dt23030ntsk3btpqet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBULKxZ4Wji1fvM9oyIpYoZ8s1b7DreDNg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619097937581-ehtv4vkje2l3k3dt23030ntsk3btpqet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
